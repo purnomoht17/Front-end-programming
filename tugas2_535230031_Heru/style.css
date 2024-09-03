@@ -1,0 +1,104 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    height: 100vh;
+}
+
+.kartu-identitas {
+    width: 80%;
+    max-width: 670px;
+    background: url('./assets/ktp-background.jpg') no-repeat center/cover;
+    padding: 20px;
+    border: 2px solid #000;
+    border-radius: 30px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 20px; /* Jarak dari atas */
+    left: 20px; /* Jarak dari kiri */
+}
+
+.info-pribadi p {
+    margin: 5px 0;
+    font-size: 16px; 
+}
+
+.kepala-kartu {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.kepala-kartu h2, .kepala-kartu h3 {
+    margin: 0;
+    font-weight: normal;
+}
+
+.isi-kartu {
+    display: flex;
+    justify-content: space-between;
+}
+
+.info-pribadi p:nth-child(n+6):nth-child(-n+8) {
+    margin-left: 43px; 
+}
+
+.info-penting {
+    font-size: 23px; 
+}
+
+.info-pribadi {
+    width: 70%;
+}
+
+.jenis-kelamin-golongan-darah {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0;
+}
+
+.jenis-kelamin-golongan-darah p {
+    margin: 0;
+    font-size: 16px; 
+}
+
+.foto-dan-tanda {
+    width: 30%;
+    text-align: center;
+}
+
+.foto-dan-tanda img {
+    width: 130px;
+    height: 150px;
+    margin-bottom: 0px;
+}
+
+.tanda-tangan {
+    width: 150px;
+    height: auto;
+    margin-top: 10px;
+    border: none; 
+}
+
+@media (max-width: 768px) {
+    .kartu-identitas {
+        width: 95%;
+    }
+
+    .isi-kartu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .info-pribadi, .foto-dan-tanda {
+        width: 100%;
+    }
+
+    .foto-dan-tanda img {
+        width: 80px;
+    }
+
+    .tanda-tangan {
+        width: 100px; 
+    }
+}
