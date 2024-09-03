@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Java Script Syntax</title>
+
+    <script>
+
+        var hobbies = [];
+
+        function AddHobby(pHobby) {
+            hobbies.push(pHobby);
+            document.getElementById("iHobby").value = ""; // Untuk membersihkan input
+            document.getElementById("iHobby").focus(); // Untuk memindah kursor ke iHobby
+            console.log(hobbies.length);
+        }
+
+        function InLoop() {
+            var item;
+            document.getElementById("oResult").innerHTML = "";
+            for (item of hobbies) {
+                document.getElementById("oResult").innerHTML += item + "<br />";
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+
+    <input type="text" id="iHobby" placeholder="Add your hobby" style="width: 500px;">
+    <button type="button" onclick='AddHobby(document.getElementById("iHobby").value)'>Add</button>
+    <button type="button" onclick='InLoop()'>Show All</button>
+
+    <br><br>
+
+    <p id="oResult"></p>
+
+</body>
+
+</html>
