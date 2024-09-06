@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Sederhana</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        input[type="text"] {
+            width: 100px;
+            margin: 5px;
+        }
+        button {
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Kalkulator Sederhana</h1>
+
+    <label for="bil1">Bil 1:</label>
+    <input type="text" id="bil1" placeholder="Masukkan angka"><br>
+
+    <label for="bil2">Bil 2:</label>
+    <input type="text" id="bil2" placeholder="Masukkan angka"><br>
+
+    <label for="hasil">Hasil:</label>
+    <input type="text" id="hasil" disabled><br>
+
+    <button onclick="hitung('+')">+</button>
+    <button onclick="hitung('-')">-</button>
+    <button onclick="hitung('*')">*</button>
+    <button onclick="hitung('/')">/</button>
+
+    <script>
+        function hitung(operator) {
+            const bil1 = parseFloat(document.getElementById('bil1').value);
+            const bil2 = parseFloat(document.getElementById('bil2').value);
+            let hasil;
+
+            if (isNaN(bil1) || isNaN(bil2)) {
+                alert("Silakan masukkan angka yang valid.");
+                return;
+            }
+
+            switch (operator) {
+                case '+':
+                    hasil = bil1 + bil2;
+                    break;
+                case '-':
+                    hasil = bil1 - bil2;
+                    break;
+                case '*':
+                    hasil = bil1 * bil2;
+                    break;
+                case '/':
+                    if (bil2 === 0|| bil1 === 0) {
+                        alert("Tidak bisa membagi dengan nol.");
+                        return;
+                    }
+                    hasil = bil1 / bil2;
+                    break;
+                default:
+                    return;
+            }
+
+            document.getElementById('hasil').value = hasil;
+        }
+    </script>
+
+</body>
+</html>
