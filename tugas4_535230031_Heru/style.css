@@ -10,10 +10,10 @@
 }
 
 :root {
-  --bg-color: #0e2954;
-  --second-bg-color: #2a629a;
+  --bg-color: #646464;
+  --second-bg-color: #353535;
   --text-color: #d8d9da;
-  --main-color: #faffaf;
+  --main-color: rgb(203, 189, 188);
 }
 
 html {
@@ -232,25 +232,9 @@ span {
 }
 
 @keyframes words {
-  0%,
-  20% {
-    content: "Data Science";
-  }
   21%,
   40% {
     content: "Backend Developer";
-  }
-  41%,
-  60% {
-    content: "Mobile Developer";
-  }
-  61%,
-  80% {
-    content: "Software Engineer";
-  }
-  81%,
-  100% {
-    content: "Desktop Programmer";
   }
 }
 
@@ -293,6 +277,17 @@ span {
 .education h2 {
   margin-bottom: 5rem;
 }
+
+.education .timeline-content img {
+  width: 100%; 
+  max-width: 200px;
+  height: auto; 
+  object-fit: cover; 
+  border-radius: 10px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  margin-bottom: 1rem; 
+}
+
 .timeline-items {
   max-width: 1200px;
   margin: auto;
@@ -483,7 +478,10 @@ span {
 .portfolio-item p {
   font-size: 1.3rem;
 }
-
+.portfolio-item a {
+  text-decoration: none; 
+  color: inherit; 
+}
 .contact {
   background: var(--bg-color);
 }
@@ -596,7 +594,6 @@ span {
   html {
     font-size: 55%;
   }
-
   .services-container {
     padding-bottom: 7rem;
     grid-template-columns: repeat(2, 1fr);
@@ -651,5 +648,51 @@ span {
 @media (max-width: 768px) {
   #menu-icon {
     display: block;
+  }
+
+  .navbar {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 50%;
+    padding: 1rem 3%;
+    background: var(--second-bg-color);
+    backdrop-filter: blur(20px);
+    border-bottom-left-radius: 2rem;
+    border-left: 2px solid var(--main-color);
+    border-bottom: 2px solid var(--main-color);
+
+    display: none;
+  }
+  .navbar.active {
+    display: block;
+  }
+  .navbar a {
+    display: block;
+    font-size: 2rem;
+    margin: 3rem 0;
+  }
+  .home {
+    flex-direction: column-reverse;
+    margin: 5rem 4rem;
+  }
+  .home-content h3 {
+    font-size: 2.6rem;
+  }
+  .home-content h1 {
+    font-size: 5rem;
+  }
+  .home-content p {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .home-img img {
+    width: 56vw;
+  }
+  .services h2 {
+    margin-bottom: 3rem;
+  }
+  .services-container {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
