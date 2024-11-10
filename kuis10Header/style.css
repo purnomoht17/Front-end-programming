@@ -1,0 +1,23 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    padding: 15px 20px;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+}
+
+header a {
+    color: white;
+    text-decoration: none; /* Menghilangkan underline pada link */
+}
+
+/* Hover effect untuk link di dalam header */
+header a:hover {
+    color: #f39c12; /* Ganti warna saat hover */
+}

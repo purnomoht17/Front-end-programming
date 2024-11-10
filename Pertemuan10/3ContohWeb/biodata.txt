@@ -1,0 +1,10 @@
+{
+ Nama: HERU PURNOMO
+ NIM: 535230031
+ Fakultas: Teknologi Informasi
+}
+{
+ Nama: M Andrian Syahputra
+ NIM: 123456789
+ Fakultas: Teknologi Informasi
+}

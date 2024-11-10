@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <title>Document</title>
+    <style>
+        .hidden{
+            display: none;
+        }
+    </style>
+</head>
+<body ng-controller="MainController" ng-app="myApp">
+    
+    <!-- ng-model -->
+    <h2>ng-model Example</h2>
+    <input type="text" ng-model="name" placeholder="Enter your name">
+    <p>Hello, {{ name }}!</p>
+
+    <!-- ng-repeat -->
+    <h2>ng-repeat Example</h2>
+    <ul>
+        <li ng-repeat="item in items">{{ item }}</li>
+    </ul>
+
+    <!-- ng-show and ng-hide -->
+    <h2>ng-show and ng-hide Example</h2>
+    <button ng-click="toggleShowHide()">Toggle Show/Hide</button>
+    <p ng-show="isVisible">This paragraph is visible</p>
+    <p ng-hide="isVisible">This paragraph is hidden</p>
+
+    <!-- ng-if -->
+    <h2>ng-if Example</h2>
+    <button ng-click="toggleCondition()">Toggle Condition</button>
+    <p ng-if="isConditionMet">This Paragraph appears if the condition is met</p>
+
+    <!-- ng-click -->
+    <h2>ng-click Example</h2>
+    <button ng-click="incrementCounter()">Click me</button>
+    <p>You have clicked the button {{ counter }} times.</p>
+
+    <script src="3.1 app.js"></script>
+</body>
+</html>
